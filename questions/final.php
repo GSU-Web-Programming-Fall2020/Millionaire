@@ -21,12 +21,8 @@
             $money = $_COOKIE['money'];
         }
     }
-}
 
-    header("Location: ./register.php");
-    exit();
-
-
+    //INSERT CODE TO ADD MONEY HERE
     ?>
     <div>
         <div class="bg"></div>
