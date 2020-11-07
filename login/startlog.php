@@ -2,7 +2,6 @@
 $file = '../data/data.txt';
 $textFile = file_get_contents($file);
 $singles = explode("\n", $textFile);
-$notInFile = false;
 $player = $_POST["player"];
 $userInfo = array();
 foreach ($singles as $users) {

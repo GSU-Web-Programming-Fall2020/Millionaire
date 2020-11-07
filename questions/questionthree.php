@@ -10,9 +10,13 @@
 <body>
     <?php
     $answer = $_POST["answer"];
-    if (!($answer == "D")) {
-        header("Location: ./wrong.php");
-        exit();
+    if ($answer == "X") {
+        setcookie('money', 100);
+       header("Location: final.php");
+    } else {
+       if($answer !== "D"){
+        header("Location: wrong.php"); 
+       }
     }
     ?>
     <div class="bg"></div>
@@ -33,6 +37,9 @@
                         <input class="answer" type="radio" name="answer" value="B"> <label class="answertext">Theodore Roosevelt</label>
                         <input class="answer" type="radio" name="answer" value="C"> <label class="answertext">Benjamin Harrison</label>
                         <input class="answer" type="radio" name="answer" value="D"> <label class="answertext">Martin Van Buren</label>
+                    </li>
+                    <li>
+                        <input class="answer" type="radio" name="answer" value="X"> <label class="answertext">Call it for $1,000</label>
                     </li>
                 </ul>
                 <ul class="centered">

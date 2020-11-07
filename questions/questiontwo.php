@@ -34,6 +34,9 @@
                         <input class="answer" type="radio" name="answer" value="C"> <label class="answertext">A Planet</label>
                         <input class="answer" type="radio" name="answer" value="D"> <label class="answertext">A Continent</label>
                     </li>
+                    <li>
+                        <input class="answer" type="radio" name="answer" value="X"> <label class="answertext">Call it for $100</label>
+                    </li>
                 </ul>
                 <ul class="centered">
                     <li class="column">

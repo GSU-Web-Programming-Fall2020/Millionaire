@@ -11,10 +11,22 @@
 <body>
     <?php
     $answer = $_POST["answer"];
-    if (!($answer == "A")) {
-        header("Location: ./wrong.php");
-        exit();
+    if(!(isset($_COOKIE['money']))){
+        if (!($answer == "A")) {
+            header("Location: ./wrong.php");
+            exit();
+        }
+        else {
+            setcookie('money', 1000000);
+            $money = $_COOKIE['money'];
+        }
     }
+}
+
+    header("Location: ./register.php");
+    exit();
+
+
     ?>
     <div>
         <div class="bg"></div>
@@ -24,7 +36,9 @@
 
         <img src="../data/logo.png" alt="Logo" class="center">
 
-        <h1>Congratulations! You are now a millionaire!</h2>
+        <?php 
+            echo "<h1>Congratulations! You've made it with $".$_COOKIE['money']."<h2>";
+        ?>
             <a class="button" title="Sign up" href="./start.php">TRY AGAIN</a>
             <a class="button" title="Leaderboard" href="../leaderboard.php">LEADERBOARD</a>
 
