@@ -1,5 +1,5 @@
 <?php
- $path = 'data.txt';
+ $path = '../data/data.txt';
  if (isset($_POST['field1']) && isset($_POST['field2'])) {
     $fh = fopen($path,"a+");
     $string = $_POST['field1'].' - '.$_POST['field2'];
