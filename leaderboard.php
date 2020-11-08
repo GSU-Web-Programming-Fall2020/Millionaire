@@ -1,3 +1,4 @@
+<html>
 <body>
         <div class="bg"></div>
         <div class="bg bg2"></div>
@@ -26,15 +27,19 @@
                 <fieldset>
                     <table style="width:100%" id="player">
                         <tr>
-                          <th>RANK</th>
+                            <th>Rank</th>
+                            <th>PLAYER</th>
+                            <th>SCORE</th>
+                        </tr>
+                        <tr>
                             <td>1</td>
+                            <td>David</td>
+                             <td>100000</td>
+                        </tr>
+                        <tr>
                             <td>2</td>
-                          <th>PLAYER</th>
-                                <td>OWEN</td>
-                                <td>DAVID</td>
-                          <th>SCORE</th>
-                                <td>10000</td>
-                                <td>100000</td>
+                            <td>Owen</td>
+                            <td>10000</td>
                         </tr>
                       </table>
                     </br>
