@@ -27,11 +27,14 @@
                     <table style="width:100%" id="player">
                         <tr>
                           <th>RANK</th>
-                          <p> <?php echo $rank++; ?></p>
+                            <td>1</td>
+                            <td>2</td>
                           <th>PLAYER</th>
-                                <?php print_r ($player);?>
+                                <td>OWEN</td>
+                                <td>DAVID</td>
                           <th>SCORE</th>
-                                <?php print_r($score)?>
+                                <td>10000</td>
+                                <td>100000</td>
                         </tr>
                       </table>
                     </br>
