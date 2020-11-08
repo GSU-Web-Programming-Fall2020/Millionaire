@@ -26,6 +26,7 @@
             <form action="leaderboard.php" method="GET">
                 <fieldset>
                     <table style="width:100%" id="player">
+                    <tr style="text-align:center">
                         <tr>
                             <th>Rank</th>
                             <th>PLAYER</th>
