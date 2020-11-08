@@ -1,31 +1,45 @@
-<!DOCTYPE html>
-<html>
-  
-	<head>
-		<title>Leaderboard</title>
-		
-		<meta charset="utf-8" />
-		<!-- Link Style sheet -->
-		<link rel="stylesheet" href="./css/style.css">
-		
-	</head>
-
-	<body>
+<body>
         <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
         <h1>LEADERBOARD</h1>
+        <?php
+            $file = '../data/data.txt';
+            $textFile = file_get_contents($file);
+            $singles = explode("\n", $textFile);
+            $player = $_POST["player"];
+            $userInfo = array();
+            $rank = 0;
+            foreach ($singles as $users => $row) {
+                $name[$users] = $row['name'];
+                $score[$users] = $row['score'];                
+                
+            }
+            $name = array_column($singles, 'name');
+            $score = array_column($singles, 'score');
+
+            array_multisort($name, SORT_ASC, $score, SORT_DESC, $singles);
+        ?>
+
         <div>
             <form action="leaderboard.php" method="GET">
                 <fieldset>
                     <table style="width:100%" id="player">
                         <tr>
                           <th>RANK</th>
+                          <p> <?php echo $rank++; ?></p>
                           <th>PLAYER</th>
+                                <?php print_r ($player);?>
                           <th>SCORE</th>
+                                <?php print_r($score)?>
                         </tr>
                       </table>
                     </br>
                 </fieldset>
             </form>
         </div>
+        
+    </body>
+    </html>
+
+
