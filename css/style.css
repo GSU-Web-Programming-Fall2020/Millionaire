@@ -52,12 +52,12 @@ body {
     z-index: -1;
 }
 
-.bg-2 {
+.bg2 {
     animation-direction: alternate-reverse;
     animation-duration: 4s;
 }
 
-.bg-3 {
+.bg3 {
     animation-duration: 5s;
 }
 
@@ -82,3 +82,12 @@ label {
 .answertext {
     font-size: 1.5em;
 }
+
+@keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
